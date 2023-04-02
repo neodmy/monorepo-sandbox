@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  neo4j:
+    image: verdaccio/verdaccio
+    container_name: monorepo-sandbox
+    ports:
+      - 4873:4873
