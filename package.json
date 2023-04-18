@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/@neodmy"
   ],
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -25,8 +25,5 @@
     "test": "lerna run test",
     "infra:up": "bash -c 'docker-compose --file docker/test/docker-compose.yml --project-name monorepo-sandbox up -d --force-recreate --build'",
     "infra:down": "bash -c 'docker-compose --file docker/test/docker-compose.yml --project-name monorepo-sandbox stop'"
-  },
-  "publishConfig": {
-    "registry": "http://localhost:4873"
   }
 }

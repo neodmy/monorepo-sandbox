@@ -15,9 +15,9 @@
   },
   "scripts": {
     "test": "jest __tests__/*.test.ts",
-    "build": "rimraf ./dist && tsc",
-    "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --fix --ext .ts ."
+    "build": "rimraf dist && tsc",
+    "lint": "eslint --ext .ts ",
+    "lint:fix": "eslint --fix --ext .ts "
   },
   "bugs": {
     "url": "https://github.com/neodmy/monorepo-sandbox/issues"
