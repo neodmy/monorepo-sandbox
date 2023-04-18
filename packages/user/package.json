@@ -1,6 +1,6 @@
 {
-  "name": "@neodmy/checkout",
-  "version": "0.0.1",
+  "name": "monorepo-sandbox-user",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "David Yusta <david.yusta@guidesmiths.com>",
   "homepage": "https://github.com/neodmy/monorepo-sandbox#readme",
@@ -21,9 +21,5 @@
   },
   "bugs": {
     "url": "https://github.com/neodmy/monorepo-sandbox/issues"
-  },
-  "dependencies": {
-    "@neodmy/order": "*",
-    "@neodmy/user": "*"
   }
 }

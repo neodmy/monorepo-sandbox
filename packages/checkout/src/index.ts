@@ -1,5 +1,5 @@
-import UserApi from '@neodmy/user';
-import OrderApi from '@neodmy/order';
+import UserApi from 'monorepo-sandbox-user';
+import OrderApi from 'monorepo-sandbox-order';
 
 export default class Checkout {
 	constructor(
