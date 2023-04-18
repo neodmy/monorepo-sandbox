@@ -1,5 +1,5 @@
-import UserApi from 'user';
-import OrderApi from 'order';
+import UserApi from '@neodmy/user';
+import OrderApi from '@neodmy/order';
 
 export default class Checkout {
 	constructor(
