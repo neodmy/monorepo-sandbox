@@ -23,7 +23,7 @@
     "url": "https://github.com/neodmy/monorepo-sandbox/issues"
   },
   "dependencies": {
-    "user": "*",
-    "order": "*"
+    "order": "*",
+    "user": "*"
   }
 }
