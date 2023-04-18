@@ -1,8 +1,26 @@
-version: '3'
+version: '2'
 
 services:
-  neo4j:
-    image: verdaccio/verdaccio
-    container_name: monorepo-sandbox
+  verdaccio:
+    image: verdaccio/verdaccio:5
+    container_name: verdaccio_root_path
     ports:
-      - 4873:4873
+      - '4873:4873'
+    volumes:
+      - verdaccio:/verdaccio
+
+  nginx:
+    restart: always
+    build: conf/nginx
+    ports:
+      - '80:80'
+    volumes:
+      - /www/public
+    volumes_from:
+      - verdaccio
+    links:
+      - verdaccio:verdaccio
+
+volumes:
+  verdaccio:
+    driver: local
