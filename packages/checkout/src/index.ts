@@ -10,6 +10,7 @@ export default class Checkout {
 	generateOrder() {
 		const user = this.userApi.getUser();
 		const order = this.orderApi.getOrder(user.id);
+		// mock comment
 		return {
 			user,
 			order,
