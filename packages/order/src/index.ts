@@ -15,6 +15,7 @@ export type Order = {
 };
 
 export default class OrderApi {
+	// mock comment
 	getOrder(userId: number): Order {
 		return {
 			user: userId,
