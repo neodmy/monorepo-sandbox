@@ -45,7 +45,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: chore/bump-version-${{ inputs.version-bump }}
-          title: chore/bump-version-${{ inputs.version-bump }}
+          branch: releases/bump-version-${{ inputs.version-bump }}
+          title: releases/bump-version-${{ inputs.version-bump }}
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           commit-message: "chore: bump version to ${{ inputs.version-bump }}"
