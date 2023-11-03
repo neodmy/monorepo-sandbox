@@ -4,15 +4,15 @@ on:
   pull_request:
     types:
       - closed
-    branches:
-      - 'releases/**'
 
 permissions:
   contents: write
 
 jobs:
   if_merged:
-    if: github.event.pull_request.merged == true
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.head_ref, 'releases/')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
