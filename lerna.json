@@ -3,5 +3,13 @@
   "version": "0.0.6",
   "packages": [
     "packages/*"
-  ]
+  ],
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "changelogPreset": "conventionalcommits",
+      "forcePublish": true,
+      "gitTagVersion": false
+    }
+  }
 }
