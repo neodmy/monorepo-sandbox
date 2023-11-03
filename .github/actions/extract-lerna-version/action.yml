@@ -15,4 +15,4 @@ runs:
       run: |
         LERNA_VERSION=$(jq -r '.version' ${{ inputs.lerna-json-path }})
         echo "Using Lerna version from lerna.json: $LERNA_VERSION"
-        echo "lerna-version::${LERNA_VERSION}" >> $GITHUB_OUTPUT
+        echo "lerna-version=${LERNA_VERSION}" >> $GITHUB_OUTPUT
