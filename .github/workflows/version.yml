@@ -42,10 +42,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Read Lerna version
+        run: |
+          LERNA_VERSION=$(jq -r '.version' lerna.json)
+          echo "Using version from lerna.json: $LERNA_VERSION"
+          echo "LERNA_VERSION=$LERNA_VERSION" >> $GITHUB_ENV
+        shell: bash
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: releases/bump-version-${{ inputs.version-bump }}
-          title: releases/bump-version-${{ inputs.version-bump }}
+          branch: releases/bump-version-${{ env.LERNA_VERSION }}
+          title: releases/bump-version-${{ env.LERNA_VERSION }}
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
-          commit-message: "chore: bump version to ${{ inputs.version-bump }}"
+          commit-message: "chore: bump version to ${{ env.LERNA_VERSION }}"
