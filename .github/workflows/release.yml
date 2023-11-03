@@ -19,17 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Read Lerna version
-        run: |
-          LERNA_VERSION=$(jq -r '.version' lerna.json)
-          echo "Using version from lerna.json: $LERNA_VERSION"
-          echo "LERNA_VERSION=$LERNA_VERSION" >> $GITHUB_ENV
-        shell: bash
+      - name: Extract Lerna Version
+        id: extract-lerna-version
+        uses: ./.github/actions/extract-lerna-version
 
       - name: Release
         uses: release-drafter/release-drafter@65c5fb495d1e69aa8c08a3317bc44ff8aabe9772 # v5.24.0
         with:
-          tag: "v${{ env.LERNA_VERSION }}"
-          version: "v${{ env.LERNA_VERSION }}"
+          tag: "v${{ steps.extract-lerna-version.outputs.lerna-version }}"
+          version: "v${{ steps.extract-lerna-version.outputs.lerna-version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
