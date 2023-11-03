@@ -6,8 +6,6 @@ on:
       - closed
     branches:
       - 'releases/**'
-    paths:
-      - 'lerna.json'
 
 permissions:
   contents: write
