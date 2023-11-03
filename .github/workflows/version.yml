@@ -48,5 +48,5 @@ jobs:
         with:
           branch: chore/bump-version-${{ inputs.version-bump }}
           title: chore/bump-version-${{ inputs.version-bump }}
-          author: ${{ env.PR_AUTHOR_EMAIL }}
+          author: "github-actions@users.noreply.github.com"
           commit-message: "chore: bump version to ${{ inputs.version-bump }}"
