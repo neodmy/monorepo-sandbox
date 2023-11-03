@@ -34,7 +34,6 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          export PR_AUTHOR_EMAIL=$(git config user.email)
         shell: bash
 
       - name: Bump version of packages
@@ -48,5 +47,5 @@ jobs:
         with:
           branch: chore/bump-version-${{ inputs.version-bump }}
           title: chore/bump-version-${{ inputs.version-bump }}
-          author: "github-actions@users.noreply.github.com"
+          author: github-actions[bot] github-actions[bot]@users.noreply.github.com
           commit-message: "chore: bump version to ${{ inputs.version-bump }}"
