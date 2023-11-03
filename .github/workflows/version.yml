@@ -64,7 +64,7 @@ jobs:
           branch: releases/bump-version-${{ env.LERNA_VERSION }}
           title: releases/bump-version-${{ env.LERNA_VERSION }}
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
-          commit-message: "chore: bump version to ${{ env.LERNA_VERSION }}"
+          commit-message: "chore: bump version to v${{ env.LERNA_VERSION }}"
           labels: releases
           body: |
             Bump packages to ${{ env.LERNA_VERSION }}. A new draft release will be generate on merge.
